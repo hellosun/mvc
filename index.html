@@ -67,11 +67,8 @@
              // 预加载项
              preload:'javascript'
          })
-         seajs.use(["jquery","./js/main"],function($,b){
-            $(document).ready(function(){
-                b.doSomething();
-            })
-
+         seajs.use(["./js/main"],function(a){
+                a.doSomething();
            // console.log(seajs.resolve('jquery')) ;
          });
 

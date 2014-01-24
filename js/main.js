@@ -17,7 +17,6 @@ define(function(require, exports, module){
     exports.doSomething = function(){
 
         var Asset = model.create();
-       // console.log(Asset.parent);
 
 
 
@@ -31,7 +30,6 @@ define(function(require, exports, module){
                 this.records = {};
                 for(var i= 0, il = values.length; i < il; i++){
                     var record = this.init(values[i]);
-                    //console.log(record);
                     record.newRecord = false;
                     this.records[record.id] = record;
                 }
@@ -81,8 +79,9 @@ define(function(require, exports, module){
         asset.name = "same";
         asset.update();
        // console.log(Asset.find(asset.id).name);
-        $.getJSON("http://127.0.0.1/Work/f2e/apps/wisdom/api/mytest.php",function(result){
+        $.getJSON("js/data.js",function(result){
             Asset.populate(result.data);
+            console.log(result.data)
         });
 /*       console.dir(module)
        console.log(module.uri);

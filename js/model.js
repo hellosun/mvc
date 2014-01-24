@@ -28,7 +28,6 @@ define(function(require, exports, module){
        init: function(){
            var instance = Object.create(this.prototype);
            instance.init.apply(instance, arguments);
-           console.log(instance);
            return instance;
        },
 
