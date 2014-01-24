@@ -81,7 +81,6 @@ define(function(require, exports, module){
        // console.log(Asset.find(asset.id).name);
         $.getJSON("js/data.js",function(result){
             Asset.populate(result.data);
-            console.log(result.data)
         });
 /*       console.dir(module)
        console.log(module.uri);
